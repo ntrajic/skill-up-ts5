@@ -1,0 +1,805 @@
+        design-patterns> tsc --init <enter>
+        OUT:
+        Created a new tsconfig.json with:                                                                                       
+                                                                                                                     TS 
+        target: es2016          // es2022
+        module: commonjs
+        strict: true
+        esModuleInterop: true
+        skipLibCheck: true
+        forceConsistentCasingInFileNames: true
+                + PROJ. STRUCTURE
+        "include": [                                // src
+            "./src/**/*.ts"
+        ],
+        "outDir": "./build",                        // build
+
+
+
+        OBSERVER:
+        ========
+        \design-patterns\observer.ts
+        \design-patterns> tsc
+        \design-patterns> node .\build\observer.js
+        OUT: 
+        Updated! The new value is Design Patterns   // invoked is LogObserver's method update(value: string)
+        Updated! The new value is Design Patterns   // notified observer 1
+        Updated! The new value is Design Patterns   // notified observer 2
+        Updated! The new value is Design Patterns   // notified observer 3
+
+        STRATEGY:
+        =========
+        \design-patterns\strategy.ts
+        \design-patterns> tsc                         
+        \design-patterns> node .\build\strategy.js 
+        OUT: Collectging the user's credit card details...
+
+        COMMAND:
+        =======
+        \design-patterns> tsc                         
+        \design-patterns> node .\build\command.js    
+        OUT: 
+        The current value of counter is 1
+        The current value of counter is: 4          // after 3 increments/executes
+        The current value of counter is: 3          // after 1 decrement/undo
+
+
+        SINGLETON:
+        ==========
+        \design-patterns> tsc
+        \design-patterns> node .\build\singleton.js
+        OUT:
+        Widget Views: 90
+        Button Clicks: 64
+        Facebook Shares: 20
+        Twitter Shares: 30
+        Widget views: 91
+        Twitter shares: 32
+
+
+        FACTORY:
+        =======
+        design-patterns> tsc
+        \design-patterns> node .\build\factory.js   
+        OUT:  
+        Warrior at level 12:  { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        Mage at level 12:  { strength: 2, dexterity: 12, health: 14, magic: 92 }
+
+        OBJECT POOL (flyweight objects)
+        ===============================
+        LOAD 40 objects form the pool
+        OUT:
+        1
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        2
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        3
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        4
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        5
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        6
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        7
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        8
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        9
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        10
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        11
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        12
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        13
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        14
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        15
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        16
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        17
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        18
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        19
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        20
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        21
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        22
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        23
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        24
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        25
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        26
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        27
+         { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        28
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        29
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        30
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        31
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        32
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+         33
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        34
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        35
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        36
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        37
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        38
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        39
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+        40
+        { strength: 30, dexterity: 21, health: 32, magic: 0 }
+
+        TEMPLATE:
+        =========
+        \design-patterns> tsc
+        \design-patterns> node .\build\template.js   
+        OUT: 
+        14 left on trial
+        13 left on trial
+        12 left on trial
+        11 left on trial
+        10 left on trial
+        9 left on trial
+        8 left on trial
+        7 left on trial
+        6 left on trial
+        5 left on trial
+        4 left on trial
+        3 left on trial
+        2 left on trial
+        1 left on trial
+        Trial Expired
+        On paid plan with 200$ subscription
+
+
+        ADAPTER
+        ========
+        \design-patterns> tsc
+        PS C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns> node .\build\adapter.js  
+
+        node:internal/process/promises:289
+                    triggerUncaughtException(err, true /* fromPromise */);
+                    ^
+        AxiosError [AggregateError]
+            at AxiosError.from (C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns\node_modules\axios\dist\node\axios.cjs:836:14)
+            at RedirectableRequest.handleRequestError (C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns\node_modules\axios\dist\node\axios.cjs:3086:25)
+            at RedirectableRequest.emit (node:events:518:28)
+            at eventHandlers.<computed> (C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns\node_modules\follow-redirects\index.js:38:24)  
+            at ClientRequest.emit (node:events:518:28)
+            at TLSSocket.socketErrorListener (node:_http_client:495:9)
+            at TLSSocket.emit (node:events:518:28)
+            at emitErrorNT (node:internal/streams/destroy:169:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+            at Axios.request (C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns\node_modules\axios\dist\node\axios.cjs:3876:41)
+            at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+            at async RestCountriesAdapter.allByCurrency (C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\design-patterns\build\adapter.js:72:29) {      
+        code: 'ETIMEDOUT',
+        errors: [
+            Error: connect ETIMEDOUT 3.33.152.147:443
+                at createConnectionError (node:net:1634:14)
+                at Timeout.internalConnectMultipleTimeout (node:net:1685:38)
+                at listOnTimeout (node:internal/timers:575:11)
+                at process.processTimers (node:internal/timers:514:7) {
+            errno: -4039,
+            code: 'ETIMEDOUT',
+            syscall: 'connect',
+            address: '3.33.152.147',
+            port: 443
+            },
+            Error: connect ETIMEDOUT 15.197.142.173:443
+                at createConnectionError (node:net:1634:14)
+                at afterConnectMultiple (node:net:1664:40) {
+            errno: -4039,
+            code: 'ETIMEDOUT',
+            syscall: 'connect',
+            address: '15.197.142.173',
+            port: 443
+            }
+        ],
+        config: {
+            transitional: {
+            silentJSONParsing: true,
+            forcedJSONParsing: true,
+            clarifyTimeoutError: false
+            },
+            adapter: [ 'xhr', 'http' ],
+            transformRequest: [ [Function: transformRequest] ],
+            transformResponse: [ [Function: transformResponse] ],
+            timeout: 0,
+            xsrfCookieName: 'XSRF-TOKEN',
+            xsrfHeaderName: 'X-XSRF-TOKEN',
+            maxContentLength: -1,
+            maxBodyLength: -1,
+            env: {
+            FormData: [Function: FormData] {
+                LINE_BREAK: '\r\n',
+                DEFAULT_CONTENT_TYPE: 'application/octet-stream'
+            },
+            Blob: [class Blob]
+            },
+            validateStatus: [Function: validateStatus],
+            headers: Object [AxiosHeaders] {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': undefined,
+            'User-Agent': 'axios/1.6.8',
+            'Accept-Encoding': 'gzip, compress, deflate, br'
+            },
+            method: 'get',
+            url: 'https://restcountries.eu/rest/v2/currency/EUR',
+            data: undefined
+        },
+        request: <ref *3> Writable {
+            _events: {
+            close: undefined,
+            error: [Function: handleRequestError],
+            prefinish: undefined,
+            finish: undefined,
+            drain: undefined,
+            response: [Function: handleResponse],
+            socket: [Function: handleRequestSocket]
+            },
+            _writableState: WritableState {
+            highWaterMark: 16384,
+            length: 0,
+            corked: 0,
+            onwrite: [Function: bound onwrite],
+            writelen: 0,
+            bufferedIndex: 0,
+            pendingcb: 0,
+            [Symbol(kState)]: 17580812,
+            [Symbol(kBufferedValue)]: null
+            },
+            _maxListeners: undefined,
+            _options: {
+            maxRedirects: 21,
+            maxBodyLength: Infinity,
+            protocol: 'https:',
+            path: '/rest/v2/currency/EUR',
+            method: 'GET',
+            headers: [Object: null prototype] {
+                Accept: 'application/json, text/plain, */*',
+                'User-Agent': 'axios/1.6.8',
+                'Accept-Encoding': 'gzip, compress, deflate, br'
+            },
+            agents: { http: undefined, https: undefined },
+            auth: undefined,
+            family: undefined,
+            beforeRedirect: [Function: dispatchBeforeRedirect],
+            beforeRedirects: { proxy: [Function: beforeRedirect] },
+            hostname: 'restcountries.eu',
+            port: '',
+            agent: undefined,
+            nativeProtocols: {
+                'http:': {
+                _connectionListener: [Function: connectionListener],
+                METHODS: [
+                    'ACL',         'BIND',       'CHECKOUT',
+                    'CONNECT',     'COPY',       'DELETE',
+                    'GET',         'HEAD',       'LINK',
+                    'LOCK',        'M-SEARCH',   'MERGE',
+                    'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+                    'MOVE',        'NOTIFY',     'OPTIONS',
+                    'PATCH',       'POST',       'PROPFIND',
+                    'PROPPATCH',   'PURGE',      'PUT',
+                    'REBIND',      'REPORT',     'SEARCH',
+                    'SOURCE',      'SUBSCRIBE',  'TRACE',
+                    'UNBIND',      'UNLINK',     'UNLOCK',
+                    'UNSUBSCRIBE'
+                ],
+                STATUS_CODES: {
+                    '100': 'Continue',
+                    '101': 'Switching Protocols',
+                    '102': 'Processing',
+                    '103': 'Early Hints',
+                    '200': 'OK',
+                    '201': 'Created',
+                    '202': 'Accepted',
+                    '203': 'Non-Authoritative Information',
+                    '204': 'No Content',
+                    '205': 'Reset Content',
+                    '206': 'Partial Content',
+                    '207': 'Multi-Status',
+                    '208': 'Already Reported',
+                    '226': 'IM Used',
+                    '300': 'Multiple Choices',
+                    '301': 'Moved Permanently',
+                    '302': 'Found',
+                    '303': 'See Other',
+                    '304': 'Not Modified',
+                    '305': 'Use Proxy',
+                    '307': 'Temporary Redirect',
+                    '308': 'Permanent Redirect',
+                    '400': 'Bad Request',
+                    '401': 'Unauthorized',
+                    '402': 'Payment Required',
+                    '403': 'Forbidden',
+                    '404': 'Not Found',
+                    '405': 'Method Not Allowed',
+                    '406': 'Not Acceptable',
+                    '407': 'Proxy Authentication Required',
+                    '408': 'Request Timeout',
+                    '409': 'Conflict',
+                    '410': 'Gone',
+                    '411': 'Length Required',
+                    '412': 'Precondition Failed',
+                    '413': 'Payload Too Large',
+                    '414': 'URI Too Long',
+                    '415': 'Unsupported Media Type',
+                    '416': 'Range Not Satisfiable',
+                    '417': 'Expectation Failed',
+                    '418': "I'm a Teapot",
+                    '421': 'Misdirected Request',
+                    '422': 'Unprocessable Entity',
+                    '423': 'Locked',
+                    '424': 'Failed Dependency',
+                    '425': 'Too Early',
+                    '426': 'Upgrade Required',
+                    '428': 'Precondition Required',
+                    '429': 'Too Many Requests',
+                    '431': 'Request Header Fields Too Large',
+                    '451': 'Unavailable For Legal Reasons',
+                    '500': 'Internal Server Error',
+                    '501': 'Not Implemented',
+                    '502': 'Bad Gateway',
+                    '503': 'Service Unavailable',
+                    '504': 'Gateway Timeout',
+                    '505': 'HTTP Version Not Supported',
+                    '506': 'Variant Also Negotiates',
+                    '507': 'Insufficient Storage',
+                    '508': 'Loop Detected',
+                    '509': 'Bandwidth Limit Exceeded',
+                    '510': 'Not Extended',
+                    '511': 'Network Authentication Required'
+                },
+                Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+                ClientRequest: [Function: ClientRequest],
+                IncomingMessage: [Function: IncomingMessage],
+                OutgoingMessage: [Function: OutgoingMessage],
+                Server: [Function: Server],
+                ServerResponse: [Function: ServerResponse],
+                createServer: [Function: createServer],
+                validateHeaderName: [Function: __node_internal_],
+                validateHeaderValue: [Function: __node_internal_],
+                get: [Function: get],
+                request: [Function: request],
+                setMaxIdleHTTPParsers: [Function: setMaxIdleHTTPParsers],
+                maxHeaderSize: [Getter],
+                globalAgent: [Getter/Setter]
+                },
+                'https:': {
+                Agent: [Function: Agent],
+                globalAgent: Agent {
+                    _events: [Object: null prototype],
+                    _eventsCount: 2,
+                    _maxListeners: undefined,
+                    defaultPort: 443,
+                    protocol: 'https:',
+                    options: [Object: null prototype],
+                    requests: [Object: null prototype] {},
+                    sockets: [Object: null prototype],
+                    freeSockets: [Object: null prototype] {},
+                    keepAliveMsecs: 1000,
+                    keepAlive: true,
+                    maxSockets: Infinity,
+                    maxFreeSockets: 256,
+                    scheduling: 'lifo',
+                    maxTotalSockets: Infinity,
+                    totalSocketCount: 3,
+                    maxCachedSessions: 100,
+                    _sessionCache: [Object],
+                    [Symbol(shapeMode)]: false,
+                    [Symbol(kCapture)]: false
+                },
+                Server: [Function: Server],
+                createServer: [Function: createServer],
+                get: [Function: get],
+                request: [Function: request]
+                }
+            },
+            pathname: '/rest/v2/currency/EUR'
+            },
+            _ended: true,
+            _ending: true,
+            _redirectCount: 0,
+            _redirects: [],
+            _requestBodyLength: 0,
+            _requestBodyBuffers: [],
+            _eventsCount: 3,
+            _onNativeResponse: [Function (anonymous)],
+            _currentRequest: <ref *1> ClientRequest {
+            _events: [Object: null prototype] {
+                response: [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+                },
+                abort: [Function (anonymous)],
+                aborted: [Function (anonymous)],
+                connect: [Function (anonymous)],
+                error: [Function (anonymous)],
+                socket: [Function (anonymous)],
+                timeout: [Function (anonymous)]
+            },
+            _eventsCount: 7,
+            _maxListeners: undefined,
+            outputData: [],
+            outputSize: 0,
+            writable: true,
+            destroyed: false,
+            _last: true,
+            chunkedEncoding: false,
+            shouldKeepAlive: true,
+            maxRequestsOnConnectionReached: false,
+            _defaultKeepAlive: true,
+            useChunkedEncodingByDefault: false,
+            sendDate: false,
+            _removedConnection: false,
+            _removedContLen: false,
+            _removedTE: false,
+            strictContentLength: false,
+            _contentLength: 0,
+            _hasBody: true,
+            _trailer: '',
+            finished: true,
+            _headerSent: true,
+            _closed: false,
+            socket: <ref *2> TLSSocket {
+                _tlsOptions: {
+                allowHalfOpen: undefined,
+                pipe: false,
+                secureContext: SecureContext { context: SecureContext {} },
+                isServer: false,
+                requestCert: true,
+                rejectUnauthorized: true,
+                session: undefined,
+                ALPNProtocols: undefined,
+                requestOCSP: undefined,
+                enableTrace: undefined,
+                pskCallback: undefined,
+                highWaterMark: undefined,
+                onread: undefined,
+                signal: undefined
+                },
+                _secureEstablished: false,
+                _securePending: false,
+                _newSessionPending: false,
+                _controlReleased: true,
+                secureConnecting: true,
+                _SNICallback: null,
+                servername: null,
+                alpnProtocol: null,
+                authorized: false,
+                authorizationError: null,
+                encrypted: true,
+                _events: [Object: null prototype] {
+                close: [
+                    [Function: onSocketCloseDestroySSL],
+                    [Function],
+                    [Function: onClose],
+                    [Function: socketCloseListener],
+                    [Function]
+                ],
+                end: [ [Function: onConnectEnd], [Function: onReadableStreamEnd] ],
+                error: [Function: socketErrorListener],
+                newListener: [ [Function: keylogNewListener], [Function: newListener] ],
+                connect: [ [Function], [Function], [Function] ],
+                secure: [Function: onConnectSecure],
+                session: [Function (anonymous)],
+                free: [Function: onFree],
+                timeout: [Function: onTimeout],
+                agentRemove: [Function: onRemove],
+                data: undefined,
+                drain: [Function: ondrain]
+                },
+                _eventsCount: 11,
+                connecting: false,
+                _hadError: true,
+                _parent: null,
+                _host: 'restcountries.eu',
+                _closeAfterHandlingError: false,
+                _readableState: ReadableState {
+                highWaterMark: 16384,
+                buffer: [],
+                bufferIndex: 0,
+                length: 0,
+                pipes: [],
+                awaitDrainWriters: null,
+                [Symbol(kState)]: 59777526,
+                [Symbol(kErroredValue)]: AggregateError
+                    at internalConnectMultiple (node:net:1114:18)
+                    at afterConnectMultiple (node:net:1667:5) {
+                    code: 'ETIMEDOUT',
+                    [errors]: [Array]
+                }
+                },
+                _writableState: WritableState {
+                highWaterMark: 16384,
+                length: 200,
+                corked: 0,
+                onwrite: [Function: bound onwrite],
+                writelen: 200,
+                bufferedIndex: 0,
+                pendingcb: 1,
+                [Symbol(kState)]: 118260214,
+                [Symbol(kBufferedValue)]: null,
+                [Symbol(kWriteCbValue)]: [Function: bound onFinish],
+                [Symbol(kErroredValue)]: AggregateError
+                    at internalConnectMultiple (node:net:1114:18)
+                    at afterConnectMultiple (node:net:1667:5) {
+                    code: 'ETIMEDOUT',
+                    [errors]: [Array]
+                }
+                },
+                allowHalfOpen: false,
+                _maxListeners: undefined,
+                _sockname: null,
+                _pendingData: 'GET /rest/v2/currency/EUR HTTP/1.1\r\n' +
+                'Accept: application/json, text/plain, */*\r\n' +
+                'User-Agent: axios/1.6.8\r\n' +
+                'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                'Host: restcountries.eu\r\n' +
+                'Connection: keep-alive\r\n' +
+                '\r\n',
+                _pendingEncoding: 'latin1',
+                server: undefined,
+                _server: null,
+                ssl: null,
+                _requestCert: true,
+                _rejectUnauthorized: true,
+                timeout: 5000,
+                parser: null,
+                _httpMessage: [Circular *1],
+                autoSelectFamilyAttemptedAddresses: [ '3.33.152.147:443', '15.197.142.173:443' ],
+                handle: TLSWrap {
+                _parent: TCP {
+                    reading: [Getter/Setter],
+                    onconnection: null,
+                    [Symbol(owner_symbol)]: null,
+                    [Symbol(handle_onclose)]: [Function: done]
+                },
+                _parentWrap: null,
+                _secureContext: SecureContext { context: SecureContext {} },
+                reading: false,
+                onkeylog: [Function: onkeylog],
+                onhandshakestart: {},
+                onhandshakedone: [Function (anonymous)],
+                onocspresponse: [Function: onocspresponse],
+                onnewsession: [Function: onnewsessionclient],
+                onerror: [Function: onerror],
+                [Symbol(owner_symbol)]: [Circular *2]
+                },
+                [Symbol(alpncallback)]: null,
+                [Symbol(res)]: TLSWrap {
+                _parent: TCP {
+                    reading: [Getter/Setter],
+                    onconnection: null,
+                    [Symbol(owner_symbol)]: null,
+                    [Symbol(handle_onclose)]: [Function: done]
+                },
+                _parentWrap: null,
+                _secureContext: SecureContext { context: SecureContext {} },
+                reading: false,
+                onkeylog: [Function: onkeylog],
+                onhandshakestart: {},
+                onhandshakedone: [Function (anonymous)],
+                onocspresponse: [Function: onocspresponse],
+                onnewsession: [Function: onnewsessionclient],
+                onerror: [Function: onerror],
+                [Symbol(owner_symbol)]: [Circular *2]
+                },
+                [Symbol(verified)]: false,
+                [Symbol(pendingSession)]: null,
+                [Symbol(async_id_symbol)]: 36,
+                [Symbol(kHandle)]: null,
+                [Symbol(lastWriteQueueSize)]: 0,
+                [Symbol(timeout)]: Timeout {
+                _idleTimeout: 5000,
+                _idlePrev: null,
+                _idleNext: null,
+                _idleStart: 352,
+                _onTimeout: null,
+                _timerArgs: undefined,
+                _repeat: null,
+                _destroyed: true,
+                [Symbol(refed)]: false,
+                [Symbol(kHasPrimitive)]: false,
+                [Symbol(asyncId)]: 7,
+                [Symbol(triggerId)]: 1
+                },
+                [Symbol(kBuffer)]: null,
+                [Symbol(kBufferCb)]: null,
+                [Symbol(kBufferGen)]: null,
+                [Symbol(shapeMode)]: true,
+                [Symbol(kCapture)]: false,
+                [Symbol(kSetNoDelay)]: false,
+                [Symbol(kSetKeepAlive)]: true,
+                [Symbol(kSetKeepAliveInitialDelay)]: 60,
+                [Symbol(kBytesRead)]: 0,
+                [Symbol(kBytesWritten)]: 0,
+                [Symbol(connect-options)]: {
+                rejectUnauthorized: true,
+                ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
+                checkServerIdentity: [Function: checkServerIdentity],
+                minDHSize: 1024,
+                maxRedirects: 21,
+                maxBodyLength: Infinity,
+                protocol: 'https:',
+                path: null,
+                method: 'GET',
+                headers: [Object: null prototype] {
+                    Accept: 'application/json, text/plain, */*',
+                    'User-Agent': 'axios/1.6.8',
+                    'Accept-Encoding': 'gzip, compress, deflate, br'
+                },
+                agents: { http: undefined, https: undefined },
+                auth: undefined,
+                family: undefined,
+                beforeRedirect: [Function: dispatchBeforeRedirect],
+                beforeRedirects: { proxy: [Function: beforeRedirect] },
+                hostname: 'restcountries.eu',
+                port: 443,
+                agent: undefined,
+                nativeProtocols: { 'http:': [Object], 'https:': [Object] },
+                pathname: '/rest/v2/currency/EUR',
+                _defaultAgent: Agent {
+                    _events: [Object: null prototype],
+                    _eventsCount: 2,
+                    _maxListeners: undefined,
+                    defaultPort: 443,
+                    protocol: 'https:',
+                    options: [Object: null prototype],
+                    requests: [Object: null prototype] {},
+                    sockets: [Object: null prototype],
+                    freeSockets: [Object: null prototype] {},
+                    keepAliveMsecs: 1000,
+                    keepAlive: true,
+                    maxSockets: Infinity,
+                    maxFreeSockets: 256,
+                    scheduling: 'lifo',
+                    maxTotalSockets: Infinity,
+                    totalSocketCount: 3,
+                    maxCachedSessions: 100,
+                    _sessionCache: [Object],
+                    [Symbol(shapeMode)]: false,
+                    [Symbol(kCapture)]: false
+                },
+                host: 'restcountries.eu',
+                keepAlive: true,
+                scheduling: 'lifo',
+                timeout: 5000,
+                noDelay: true,
+                servername: 'restcountries.eu',
+                _agentKey: 'restcountries.eu:443:::::::::::::::::::::',
+                encoding: null,
+                keepAliveInitialDelay: 1000
+                }
+            },
+            _header: 'GET /rest/v2/currency/EUR HTTP/1.1\r\n' +
+                'Accept: application/json, text/plain, */*\r\n' +
+                'User-Agent: axios/1.6.8\r\n' +
+                'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                'Host: restcountries.eu\r\n' +
+                'Connection: keep-alive\r\n' +
+                '\r\n',
+            _keepAliveTimeout: 0,
+            _onPendingData: [Function: nop],
+            agent: Agent {
+                _events: [Object: null prototype] {
+                free: [Function (anonymous)],
+                newListener: [Function: maybeEnableKeylog]
+                },
+                _eventsCount: 2,
+                _maxListeners: undefined,
+                defaultPort: 443,
+                protocol: 'https:',
+                options: [Object: null prototype] {
+                keepAlive: true,
+                scheduling: 'lifo',
+                timeout: 5000,
+                noDelay: true,
+                path: null
+                },
+                requests: [Object: null prototype] {},
+                sockets: [Object: null prototype] {
+                'restcountries.eu:443:::::::::::::::::::::': [ [TLSSocket], [TLSSocket], [TLSSocket] ]
+                },
+                freeSockets: [Object: null prototype] {},
+                keepAliveMsecs: 1000,
+                keepAlive: true,
+                maxSockets: Infinity,
+                maxFreeSockets: 256,
+                scheduling: 'lifo',
+                maxTotalSockets: Infinity,
+                totalSocketCount: 3,
+                maxCachedSessions: 100,
+                _sessionCache: { map: {}, list: [] },
+                [Symbol(shapeMode)]: false,
+                [Symbol(kCapture)]: false
+            },
+            socketPath: undefined,
+            method: 'GET',
+            maxHeaderSize: undefined,
+            insecureHTTPParser: undefined,
+            joinDuplicateHeaders: undefined,
+            path: '/rest/v2/currency/EUR',
+            _ended: false,
+            res: null,
+            aborted: false,
+            timeoutCb: [Function: emitRequestTimeout],
+            upgradeOrConnect: false,
+            parser: null,
+            maxHeadersCount: null,
+            reusedSocket: false,
+            host: 'restcountries.eu',
+            protocol: 'https:',
+            _redirectable: [Circular *3],
+            [Symbol(shapeMode)]: false,
+            [Symbol(kCapture)]: false,
+            [Symbol(kBytesWritten)]: 0,
+            [Symbol(kNeedDrain)]: false,
+            [Symbol(corked)]: 0,
+            [Symbol(kOutHeaders)]: [Object: null prototype] {
+                accept: [ 'Accept', 'application/json, text/plain, */*' ],
+                'user-agent': [ 'User-Agent', 'axios/1.6.8' ],
+                'accept-encoding': [ 'Accept-Encoding', 'gzip, compress, deflate, br' ],
+                host: [ 'Host', 'restcountries.eu' ]
+            },
+            [Symbol(errored)]: null,
+            [Symbol(kHighWaterMark)]: 16384,
+            [Symbol(kRejectNonStandardBodyWrites)]: false,
+            [Symbol(kUniqueHeaders)]: null
+            },
+            _currentUrl: 'https://restcountries.eu/rest/v2/currency/EUR',
+            [Symbol(shapeMode)]: true,
+            [Symbol(kCapture)]: false
+        },
+        cause: AggregateError
+            at internalConnectMultiple (node:net:1114:18)
+            at afterConnectMultiple (node:net:1667:5) {
+            code: 'ETIMEDOUT',
+            [errors]: [
+            Error: connect ETIMEDOUT 3.33.152.147:443
+                at createConnectionError (node:net:1634:14)
+                at Timeout.internalConnectMultipleTimeout (node:net:1685:38)
+                at listOnTimeout (node:internal/timers:575:11)
+                at process.processTimers (node:internal/timers:514:7) {
+                errno: -4039,
+                code: 'ETIMEDOUT',
+                syscall: 'connect',
+                address: '3.33.152.147',
+                port: 443
+            },
+            Error: connect ETIMEDOUT 15.197.142.173:443
+                at createConnectionError (node:net:1634:14)
+                at afterConnectMultiple (node:net:1664:40) {
+                errno: -4039,
+                code: 'ETIMEDOUT',
+                syscall: 'connect',
+                address: '15.197.142.173',
+                port: 443
+            }
+            ]
+        }
+        }
+
+        Node.js v20.11.1
