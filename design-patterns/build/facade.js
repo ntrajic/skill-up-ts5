@@ -59,3 +59,11 @@ secondDeck.add(new Card("Card 4", 12, 34));
 cardDeck.add(secondDeck);
 cardDeck.add(new Card("Card 5", 99, 100));
 console.log(cardDeck.display());
+// \design-patterns> tsc
+// \design-patterns> node .\build\facade.js 
+// OUT:     
+// Card 1: 34 / 56
+// Card 2: 12 / 34
+// Card 3: 34 / 56
+// Card 4: 12 / 34
+// Card 5: 99 / 100
