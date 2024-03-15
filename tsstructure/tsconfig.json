@@ -1,0 +1,12 @@
+{
+    "include": [
+        "./src/**/*.ts",
+    ],
+    "exclude": [
+        "./build/**/*.js",
+    ]
+    "compilerOptions": {
+        "outDir": "./build",
+        "target": "es2022",
+    }
+}

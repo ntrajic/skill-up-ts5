@@ -1,0 +1,2 @@
+        \tstypes> tsc app.ts       // compile
+        \tstypes> node app.js      // run

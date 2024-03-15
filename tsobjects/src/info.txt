@@ -1,0 +1,20 @@
+        tsobjects> tsc --init
+
+        Created a new tsconfig.json with:                                                                                       
+                                                                                                                            TS       
+        target: es2016          //es2022
+        module: commonjs
+        strict: true
+        esModuleInterop: true
+        skipLibCheck: true
+        forceConsistentCasingInFileNames: true
+
+
+        You can learn more at https://aka.ms/tsconfig
+
+        update tsconfig.json file:    (to have src and build dirs in the project)
+        ==========================
+          "include": [
+                "./src/**/*.ts"
+            ],
+          "outDir": "./build",

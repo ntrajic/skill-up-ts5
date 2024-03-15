@@ -1,0 +1,98 @@
+
+            \tsstructure> vim tsconfig.json     // npx tsc --init   <enter>
+
+            tsconfig.json file:
+            {
+                "include": [
+                    "./src/**/*.ts",
+                ],
+                "compilerOptions": {
+                    "outDir": "./build",        // can be "./dist"
+                     "target": "es2022",
+                }
+            }
+            \tsstructure\src> vim app.ts
+
+
+            Mode                 LastWriteTime         Length Name
+            ----                 -------------         ------ ----
+            d-----        2024-03-14   8:52 PM                build
+            d-----        2024-03-14   8:59 PM                src
+            -a----        2024-03-14   9:00 PM            330 info.txt
+            -a----        2024-03-14   8:57 PM            117 tsconfig.json
+
+            \tsstructure> tree
+            Folder PATH listing for volume OS
+            Volume serial number is 6601-94DE
+            C:.
+            ├───build         -> after tsc in root, app.js, util.js
+            └───src           -> app.ts, util.ts
+
+            \tsstructure\src> vim app.ts
+            \tsstructure\src> vim util.ts       // exported function to app.ts
+
+            ===============================================================================================================
+            \tsstructure> tsc [src/app.ts]        // compile -> spit output to outDir "build" (tsconfig.json)
+            \tsstructure> node ./build/app.js     // run    tsstructure> node ./build/app.js OUT: The sum of 1 and 2 is 3
+            ==============================================================================================================
+
+            package.json in empty proj. tsstructure
+            =======================================
+            \tsstructure> npm init -y <enter>
+            OUT:
+            Wrote to C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\tsstructure\package.json:
+
+            {
+                "name": "tsstructure",
+                "version": "1.0.0",
+                "description": "",
+                "main": "index.js",
+                "scripts": {
+                    "test": "echo \"Error: no test specified\" && exit 1"
+                },
+                "keywords": [],
+                "author": "",
+                "license": "ISC"
+            }
+
+
+            ESLINTER
+            ========
+            npm install --save-dev eslint<enter>                          // linter installation
+            OUT:
+            + eslint@8.57.0
+            added 99 packages from 58 contributors and audited 99 packages in 5.776s
+
+            23 packages are looking for funding
+            run `npm fund` for details
+
+            found 0 vulnerabilities
+
+            config file setup:
+            ==================
+            \tsstructure> npm init @eslint/config
+
+            vim eslint.json file:                                         // configuration
+            {
+                "extends": [
+                    "eslint:recommended",
+                    "plugin:@typescript-eslint/recommended",
+                    "prettier"
+                ]
+            }
+
+            inforcing style:
+            npx eslint  .                                        // from the root of the project <tsstructure>
+            OUT: 
+            \tsstructure> npx eslint .
+            =============
+
+            WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+
+            You may find that it works just fine, or you may not.
+
+            SUPPORTED TYPESCRIPT VERSIONS: >=4.3.5 <5.4.0
+
+            YOUR TYPESCRIPT VERSION: 5.4.2
+
+            Please only submit bug reports when using the officially supported version.

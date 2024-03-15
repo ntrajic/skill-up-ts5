@@ -1,0 +1,12 @@
+        \tsdemo> tsc app.ts <enter>  
+        OUT: // types are removed after transpilation!!!
+
+        app.js file:
+        var message = 'Hello from Typescript!';
+        console.log(message);
+
+        original typescript source, app.ts :
+        let message: string = 'Hello from Typescript!';     // type string
+        console.log(message)                                //  \tsdemo> node app.js   OUT: Hello from Typescript!
+
+        // tslint installation \tsdemo> npm install tslint tslint-config-airbnb --save-dev <enter>  // only js in prod
