@@ -1,0 +1,115 @@
+        tsc --init <enter>
+        OUT:
+                                                                                                                             TS 
+        target: es2016
+        module: commonjs
+        strict: true
+        esModuleInterop: true
+        skipLibCheck: true
+        forceConsistentCasingInFileNames: true
+                + 
+                src, build
+        
+        npm init -y <enter>
+        OUT: => package.json
+        {
+                "name": "node-ts",
+                "version": "1.0.0",
+                "description": "",
+                "main": "index.js",
+                "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+                },
+                "keywords": [],
+                "author": "",
+                "license": "ISC"
+        }
+
+        POPULATE package.json w/ @types for node and express
+        ====================================================
+        npm install @types/node --save-dev
+
+        EXPRESS web server:
+        ====================
+        npm install express @types/express --save-dev
+        npm i express
+        OUT:
+        node-ts> npm install @types/express 
+        npm WARN node-ts@1.0.0 No description
+        npm WARN node-ts@1.0.0 No repository field.
+
+        + @types/express@4.17.21
+        added 10 packages from 36 contributors and audited 13 packages in 1.631s
+        found 0 vulnerabilities
+
+        // AUTOMATICC WEB SERVER RESTART w/ tsnode + nodedemon
+        // ====================================================
+        npm install ts-node nodemon --save-dev <enter>
+
+        
+        \node-ts> npm install ts-node nodemon
+        OUT:
+        npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules\chokidar\node_modules\fsevents):
+        npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+        npm WARN ts-node@10.9.2 requires a peer of typescript@>=2.7 but none is installed. You must install peer dependencies yourself.
+        npm WARN node-ts@1.0.0 No description
+        npm WARN node-ts@1.0.0 No repository field.
+
+        + nodemon@3.1.0
+        + ts-node@10.9.2
+        added 50 packages from 40 contributors and audited 64 packages in 3.829s
+
+        4 packages are looking for funding
+        run `npm fund` for details
+
+        found 0 vulnerabilities
+
+        RUN ts-node  (automatic web server reload)
+        ==========================================
+
+        \node-ts> npx ts-node .\src\server.ts
+        OUT:
+        Server is listening on port :8000
+        ==========================================
+                          OR
+       
+        \node-ts> npx ts-node .\build\server.js       
+        OUT:
+        Server is listening on port :8000
+
+        ----
+        in the browse address bar:
+
+        // AUTOMATICC WEB SERVER RESTART w/ tsnode + nodedemon
+        // ==================================================================
+        // npx nodemon --watch ./src/server.ts --exec ts-node ./src/server.ts
+        // e.g.
+        // \node-ts> npx nodemon --watch ./src/server.ts --exec ts-node ./src/server.ts
+        // OUT:
+        //                [nodemon] 3.1.0
+        //                [nodemon] to restart at any time, enter `rs`
+        //                [nodemon] watching path(s): src\server.ts
+        //                [nodemon] watching extensions: ts,json
+        //                [nodemon] starting `ts-node ./src/server.ts`
+        //                Server is listening on port :8000
+
+        automate reload w/ "serve" script in package.json: // npm run serve <enter>
+        "scripts": {
+                "dev": "tsc && node ./build/write-to-file.js",
+                "test": "echo \"Error: no test specified\" && exit 1",
+                "dev2": "tsc && node ./build/write-to-file2.js",
+                "serve": "nodemon --watch ./src/server.ts --exec ts-node ./src/server.ts"
+        },
+
+        TEST:
+        PS C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\node-ts> npm run serve
+
+        > node-ts@1.0.0 serve C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\node-ts
+        > nodemon --watch ./src/server.ts --exec ts-node ./src/server.ts
+
+        [nodemon] 3.1.0
+        [nodemon] to restart at any time, enter `rs`
+        [nodemon] watching path(s): src\server.ts
+        [nodemon] watching extensions: ts,json
+        [nodemon] starting `ts-node ./src/server.ts`
+        Server is listening on port :8000
