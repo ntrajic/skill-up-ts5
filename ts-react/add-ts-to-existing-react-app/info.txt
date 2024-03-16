@@ -83,3 +83,9 @@
 
         webpack compiled successfully
         No issues found.
+
+
+        5. Add HelloTS.tsx component, to be imported by App.txs
+        ========================================================
+
+        remove unnecessary react logo and rest, => Hello, Nikola message centered in browser body
