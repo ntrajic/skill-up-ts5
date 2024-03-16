@@ -44,3 +44,42 @@
 
         App.js -> rename -> App.tsx + remove react logo
         index.js ->rename-> index.tsx
+
+        + some edits in App.txs, index.txs   rootEl, remouve logo w/ atom orbitals
+
+        \add-ts-to-existing-react-app> 
+        pm run start  <enter>   // run react-ts app  w/out looking
+
+        OUT: 
+
+        > add-ts-to-existing-react-app@0.1.0 start C:\SRC\React\TypeScript\essentialts\essential-typescript-5\skill-up-ts5\ts-react\add-Starting the development server...
+
+        =============
+
+        WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+
+        You may find that it works just fine, or you may not.
+
+        SUPPORTED TYPESCRIPT VERSIONS: >=3.3.1 <5.2.0
+
+        YOUR TYPESCRIPT VERSION: 5.4.2
+
+        Please only submit bug reports when using the officially supported version.
+
+        =============
+        One of your dependencies, babel-preset-react-app, is importing the
+        "@babel/plugin-proposal-private-property-in-object" package without
+        declaring it in its dependencies. This is currently working because
+        "@babel/plugin-proposal-private-property-in-object" is already in your
+        Compiled successfully!
+
+        You can now view add-ts-to-existing-react-app in the browser.
+
+        Local:            http://localhost:3000
+        On Your Network:  http://192.168.1.68:3000
+
+        Note that the development build is not optimized.
+        To create a production build, use npm run build.
+
+        webpack compiled successfully
+        No issues found.
