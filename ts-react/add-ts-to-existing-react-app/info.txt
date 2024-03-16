@@ -1,0 +1,46 @@
+        npx create-react-app add-ts-to-existing-react-app  <enter>
+
+        <add-ts-to-existing-react-app> 
+        note: existing-react-app is built with javascript, and will run in browser at port 3000
+        after: npx run start <enter>
+
+        Now, to add typescript on the top of javascript!!!
+        ==================================================
+
+        1. npm install typescript --save-dev <enter>
+        ============================================
+
+        \add-ts-to-existing-react-app> npm install typescript --save-dev
+        npm WARN @apideck/better-ajv-errors@0.3.6 requires a peer of ajv@>=8 but none is installed. You must install peer dependencies yourself.
+        npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.3 (node_modules\fsevents):
+        npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+        + typescript@5.4.2
+        added 1 package from 1 contributor and audited 1572 packages in 7.562s
+
+        264 packages are looking for funding
+        run `npm fund` for details
+
+        found 2 vulnerabilities (1 moderate, 1 high)
+        run `npm audit fix` to fix them, or `npm audit` for details
+
+        2. npx tsc --init <enter>   // local version of tsc compiler
+        ==============================================================
+        OUT:
+        Created a new tsconfig.json with:   + src + build                                                                                    
+                                                                                                                     TS 
+        target: es2016
+        module: commonjs
+        strict: true
+        esModuleInterop: true
+        skipLibCheck: true
+        forceConsistentCasingInFileNames: true
+
+        3 NODE, REACT TYPES 
+        ===================
+        npm install --save-dev @types/node @types/react @types/react-dom @types/jest <enter>
+        
+        4. convert js to ts
+
+        App.js -> rename -> App.tsx + remove react logo
+        index.js ->rename-> index.tsx
